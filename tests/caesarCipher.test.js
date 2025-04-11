@@ -15,6 +15,10 @@ describe("capitalize", () => {
 		expect(caesarCipher("", 3)).toBe("");
 	});
 
+	it("throws an error if shift is lower than 1", () => {
+		expect(() => caesarCipher("test", 0)).toThrow();
+	});
+
 	it("throws an error for non-string or non-number inputs", () => {
 		expect(() => caesarCipher()).toThrow();
 		expect(() => caesarCipher(null)).toThrow();

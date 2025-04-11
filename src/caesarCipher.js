@@ -3,6 +3,7 @@ export default function caesarCipher(str, shift) {
 		throw new Error("Input must be a string and number");
 	}
 
+	if (shift < 1) throw new Error("Shift must be more than 0");
 	if (str.length <= 0) return "";
 
 	const shiftChar = (char, base) =>
