@@ -12,16 +12,16 @@ describe(() => {
 	});
 
 	it("returns empty array for empty input", () => {
-		expect(capitalize([])).toBe([]);
+		expect(analyzeArray([])).toBe([]);
 	});
 
 	it("returns an error for non-array input", () => {
-		expect(() => capitalize()).toThrow();
-		expect(() => capitalize(null)).toThrow();
-		expect(() => capitalize(undefined)).toThrow();
-		expect(() => capitalize(0)).toThrow();
-		expect(() => capitalize("a")).toThrow();
-		expect(() => capitalize({})).toThrow();
-		expect(() => capitalize(() => {})).toThrow();
+		expect(() => analyzeArray()).toThrow();
+		expect(() => analyzeArray(null)).toThrow();
+		expect(() => analyzeArray(undefined)).toThrow();
+		expect(() => analyzeArray(0)).toThrow();
+		expect(() => analyzeArray("a")).toThrow();
+		expect(() => analyzeArray({})).toThrow();
+		expect(() => analyzeArray(() => {})).toThrow();
 	});
 });
